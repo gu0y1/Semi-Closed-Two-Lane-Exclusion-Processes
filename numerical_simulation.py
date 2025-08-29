@@ -7,7 +7,7 @@ L = 500
 N = 250
 move_A_rate = 0.8
 A_to_B_rate = 0.01
-move_B_rate = 0.6
+move_B_rate = 0.8
 B_to_A_rate = 0.01
 steps = 50000
 burning_steps = 10000
@@ -131,12 +131,12 @@ for group_idx, (title, config) in enumerate(configs.items()):
     ax_A.set_title(f"{title} - Lane A", fontsize=14)
     ax_A.set_ylabel("ρ", fontsize=12)
     ax_A.set_ylim(0, 1)
-    ax_A.grid(False)
+    ax_A.grid(True)
     ax_A.legend()
 
     ax_B.set_title(f"{title} - Lane B", fontsize=14)
     ax_B.set_ylim(0, 1)
-    ax_B.grid(False)
+    ax_B.grid(True)
     ax_B.legend()
 
 for ax in axes[-2:]:
