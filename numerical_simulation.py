@@ -28,7 +28,7 @@ def simulate_fully_parallel(entry_rate, exit_B_rate):
     A_count = np.zeros(L, dtype=int)
     B_count = np.zeros(L, dtype=int)
 
-    for t in trange(steps, desc="Simulating", leave=False):
+    for t in trange(steps, desc="Simulating", leave=False):  # ✅ 加入进度条
         A_next = A.copy()
         B_next = B.copy()
         actions = {}
